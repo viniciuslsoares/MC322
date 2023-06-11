@@ -1,6 +1,6 @@
 import java.util.*;
 
-// ------------------ Pronto ----------
+// ------------- Pronto! -------------- // 
 
 public class Frota {
     private String code;
@@ -50,6 +50,9 @@ public class Frota {
     public String listaVeiculos() {
         int i = 0;
         String string = "";
+        if (listaVeiculos.size() == 0) {
+            return "Nenhum veículo registrado";
+        }
         for (Veiculo v:listaVeiculos) {
             string += i + ") " + v.getMarca() + " " + v.getModelo() + " - " + v.getPlaca() + "\n";
             i++;

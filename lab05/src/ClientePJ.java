@@ -1,7 +1,7 @@
 import java.util.*;
 import java.time.*;
 
-// -------------- Atualizar Frota ---------------
+// ------------- Pronto! -------------- // 
 
 public class ClientePJ extends Cliente {
     private final String cnpj;
@@ -75,14 +75,11 @@ public class ClientePJ extends Cliente {
         return true;
     }
 
-    public void adicionarFrota() {
-        ArrayList<Veiculo> lista_aux = new ArrayList<Veiculo>();
-        Frota frota = new Frota(lista_aux);
-        listaFrota.add(frota);
-    }
-
     public void listarFrotas() {
         int i = 0;
+        if (listaFrota.size() == 0) {
+            System.out.println("Nenhuma frota registrada");
+        }
         for (Frota f:listaFrota) {
             System.out.println(i + ") " + f);
             i++;
@@ -202,14 +199,6 @@ public class ClientePJ extends Cliente {
             System.out.println(v);
         }
         return true;
-    }
-
-    public void imprimeFrotas() {
-        int i = 0;
-        for (Frota f:listaFrota) {
-            System.out.println(i + ") Frota código: " + f.getCode());
-            i++;
-        }
     }
         
     @Override

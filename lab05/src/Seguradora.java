@@ -3,6 +3,8 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 import java.time.*;
 
+// ------------- Pronto! -------------- // 
+
 public class Seguradora {
     private final String cnpj;
     private String nome;
@@ -95,8 +97,8 @@ public class Seguradora {
 
     @Override
     public String toString() {
-        return "Seguradora:\nNome: " + nome + ";\nTelefone: " + telefone +
-        ";\nEmail: " + email + ";\nEndereço: " + endereco + ";\nLista de Clientes:\n" + 
+        return "Seguradora:\nNome: " + nome + ";Telefone: " + telefone +
+        ";\nEmail: " + email + ";Endereço: " + endereco + ";\nLista de Clientes:\n" + 
         stringClientes() + "\nLista de Seguros: " + printSeguros();
     }
 
@@ -119,7 +121,6 @@ public class Seguradora {
         }
         return string;
     }
-
 
     //Cadastro e remoção de Clientes
 
@@ -169,16 +170,20 @@ public class Seguradora {
             return 0;
         }
 
-
-    public void listarClientes(String tipoCliente) {
+    public boolean listarClientes(String tipoCliente) {
         ArrayList<Cliente> lista_tipo_cliente = new ArrayList<Cliente>();
         for (Cliente cliente_atual : listaClientes) {
             if (cliente_atual.getClass().getCanonicalName().equals(tipoCliente)) {
                 lista_tipo_cliente.add(cliente_atual);
             }
         }
+        if (lista_tipo_cliente.size() == 0) {
+            System.out.println("Nenhum cliente do tipo " + tipoCliente + " registrado");
+            return false;
+        }
         System.out.print("----- Lista dos " + tipoCliente + "-----\n");
         System.out.println(lista_tipo_cliente);
+        return true;
     }
 
     public void addSeguro(Seguro seguro) {
@@ -233,7 +238,7 @@ public class Seguradora {
                 System.out.println("O cliente não tem nenhuma frota registrada");
                 return false;
             }
-            cliente.imprimeFrotas();
+            cliente.listarFrotas();
             int pos_02 = Integer.parseInt(scanner.nextLine());
             gerarSeguroPJ(hoje, data, cliente.getListaFrota().get(pos_02), cliente);
             System.out.println("Seguro Criado com suceso");
@@ -252,6 +257,10 @@ public class Seguradora {
             return false;
         }
         ArrayList<Seguro> seguros_cliente = getSegurosPorCliente(id);
+        if (seguros_cliente.size() == 0) {
+            System.out.println("Nenhum seguro registrado");
+            return false;
+        }
         int i = 0;
         for (Seguro s:seguros_cliente) {
             System.out.println(i + ")" + s.getId() + " - " + s.nomeCliente() + "\nVeículos assegurados: " + s.imprimeVeiculos());

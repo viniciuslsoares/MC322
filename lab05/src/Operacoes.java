@@ -1,5 +1,5 @@
 
-// ------------- Pronto! -------------- // 
+// ------------- Pronto! --------------- // 
 
 public enum Operacoes {
     CADASTROS(1),

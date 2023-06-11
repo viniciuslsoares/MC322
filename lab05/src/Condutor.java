@@ -1,6 +1,6 @@
 import java.util.*;
 
-
+// ------------- Pronto! -------------- // 
 public class Condutor {
     private final String cpf;
     private String nome;
@@ -85,8 +85,8 @@ public class Condutor {
 
     @Override
     public String toString() {
-        return "Nome: " + nome + ";\nCPF: " + cpf + ".\nTelefone: " + telefone +
-        ";\nEndereco: " + endereco + ";\nEmail: " + email + ";\nData de Nascimento: " + dataNasc +
+        return "Nome: " + nome + "; CPF: " + cpf + "; Telefone: " + telefone +
+        ";\nEndereco: " + endereco + ";Email: " + email + ";Data de Nascimento: " + dataNasc +
         ";\nSinistros: " + listaSinistros + ";\n";
     }
 

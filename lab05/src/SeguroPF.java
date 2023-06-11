@@ -1,5 +1,7 @@
 import java.util.*;
 
+// ------------- Pronto! -------------- // 
+
 public class SeguroPF extends Seguro {
     private Veiculo veiculo;
     private ClientePF cliente;
@@ -31,7 +33,8 @@ public class SeguroPF extends Seguro {
 
     @Override
     public String toString() {
-        return "Nome do Cliente: " + cliente.getNome() + ";\nVeiculo: " + veiculo.getPlaca() + super.toString();
+        return "Nome do Cliente: " + cliente.getNome() + ";Veiculo: " + 
+        veiculo.getPlaca() + "\n" +  super.toString();
     }
 
     @Override

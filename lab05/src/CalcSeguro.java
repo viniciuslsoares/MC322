@@ -1,5 +1,5 @@
 
-// ------------- Pronto! -------------- // 
+// ------------- Pronto! --------------- // 
 
 public enum CalcSeguro {
     VALOR_BASE (10),

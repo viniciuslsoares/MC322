@@ -104,8 +104,8 @@ public class ClientePF extends Cliente {
 
     @Override
     public String toString() {
-        return super.toString() + "CPF: " + cpf + ";\nGênero: " + genero +  
-            ";\nEducação: " + educacao + ";\nData de Nascimento: " 
+        return super.toString() + "CPF: " + cpf + "; Gênero: " + genero +  
+            ";\nEducação: " + educacao + "; Data de Nascimento: " 
             + dataNascimento + ";\nVeículos Registrados: " + listaVeiculos();
     }
 
@@ -117,6 +117,9 @@ public class ClientePF extends Cliente {
     public String listaVeiculos() {
         int i = 0;
         String string = "";
+        if (listaVeiculos.size() == 0) {
+            return "Nenhum veículo registrado";
+        }
         for (Veiculo v:listaVeiculos) {
             string += i + ") " + v.getMarca() + " " + v.getModelo() + " - " + v.getPlaca() + "\n";
             i++;

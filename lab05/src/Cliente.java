@@ -1,5 +1,5 @@
 
-// ---------------- Pronto! ---------------
+// ------------- Pronto! -------------- // 
 
 public abstract class Cliente {
     private String nome;
@@ -55,7 +55,7 @@ public abstract class Cliente {
 
     @Override
     public String toString() {
-        return "Cliente: " + nome + ";\nTelefone: " + telefone + 
-        ";\nEndereço: " + endereco + ";\nEmail: " + email + "\n";
+        return "Cliente: " + nome + "; Telefone: " + telefone + 
+        ";\nEndereço: " + endereco + "; Email: " + email + "\n";
     }
 }

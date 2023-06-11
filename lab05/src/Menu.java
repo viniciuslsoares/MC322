@@ -153,7 +153,10 @@ public class Menu {
             case CADASTRAR_FROTA:
                 seguradora_atual = encontraSeguradora();
                 System.out.println("Qual cliente deseja adicionar a frota?");
-                seguradora_atual.listarClientes("ClientePJ");
+                if (!seguradora_atual.listarClientes("ClientePJ")) {
+                    menuInicial();
+                    break;
+                }
                 int pos = Integer.parseInt(scanner.nextLine());
                 ClientePJ clientePJ = (ClientePJ) seguradora_atual.getListaClientes().get(pos);
                 ArrayList<Veiculo> nova = new ArrayList<Veiculo>();
@@ -210,7 +213,6 @@ public class Menu {
                 System.out.println("--------------------------");
                 System.out.println("1)Calcular Receita de Seguradora\n2)Calcular Seguro do Cliente");
                 break;
-
 
             case CALCULAR_RECEITA:
                 

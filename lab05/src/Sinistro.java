@@ -2,7 +2,8 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Date;
 
-// ------------------- Pronto --------
+// ------------- Pronto! -------------- // 
+
 
 public class Sinistro {
     private final int id;

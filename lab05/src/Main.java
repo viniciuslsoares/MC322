@@ -43,7 +43,7 @@ public class Main {
         Frota frota = new Frota(lista);
 
         cliente1.cadastrarVeiculo(veiculo1);
-        cliente2.adicionarFrota();
+        cliente2.cadastrarFrota();
         cliente2.adicinarVeiculoFrota(veiculo2); //Pede qual frota deseja adicionar o veículo
         cliente3.cadastrarVeiculo(veiculo5);
         cliente4.cadastrarFrota(frota);
@@ -71,9 +71,9 @@ public class Main {
         //Método para instância do seguro
 
         System.out.println("Gerar Seguro para seguradora " + seguradora.getNome());
-        seguradora.gerarSeguro();
+        seguradora.gerarSeguro(); // Usar cpf 527.833.628-56
         System.out.println("Gerar Seguro para seguradora " + seguradora2.getNome());
-        seguradora2.gerarSeguro();
+        seguradora2.gerarSeguro(); // Usar cnpj 13.929.711/0001-97
 
         //Método para instância do sinistro
         System.out.println("Gerar Sinistro");

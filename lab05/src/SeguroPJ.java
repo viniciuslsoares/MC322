@@ -1,5 +1,6 @@
 import java.util.*;
 
+// ------------- Pronto! -------------- // 
 
 public class SeguroPJ extends Seguro {
     private Frota frota;

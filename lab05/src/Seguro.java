@@ -2,6 +2,7 @@ import java.util.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
+// ------------- Pronto! -------------- // 
 
 public abstract class Seguro {
     private final int id;
@@ -95,8 +96,8 @@ public abstract class Seguro {
 
     @Override
     public String toString() {
-        return "ID: " + id + ";\nPeríodo: " + dataInicio + " a " + dataFim + ";\nValor: " + valorMensal
-        + ";\nSeguradora: " + seguradora.getNome() + ";\nSinistros: " + listaSinistros + ";\nCondutores: " 
+        return "ID: " + id + ";Período: " + dataInicio + " a " + dataFim + ";\nValor: " + valorMensal
+        + ";Seguradora: " + seguradora.getNome() + ";\nSinistros: " + listaSinistros + ";\nCondutores: " 
         + listaCondutores();
     }
 
@@ -166,6 +167,8 @@ public abstract class Seguro {
 
     public void imprimeCondutores() {
         int i = 0;
+        if (listaCondutores.size() == 0) 
+            System.out.println("Nenhum condutor cadastrado");
         for (Condutor c:listaCondutores) {
             System.out.println(i + ")" + c.getNome());
         }
